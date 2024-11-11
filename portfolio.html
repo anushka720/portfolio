@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Engineering Student</p>
+                <h1>Hi, I'm <span>Anushka</span> <br> From Sonebhadra, UP</h1>
+            </div>
+        </div>
+    </div>
+    <!-- about -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="profile.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p class="para">Hii all, This is Anushka!
+                         <br><br>
+                       <ul class="one">
+                          <li>Passionate Computer Science Student!</li>
+                          <li>Aspiring Full Stack Developer!</li>
+                       </ul>
+                       <br><br>
+                       <p class="two">
+                          -Enthusiastic and optimistic engineering student <br>
+                          -I'm in 3rd year of my college <br>
+                          -Learning frontend using HTML, CSS and Javascript <br>
+                          -Eager to learn and deriven by curiosity <br>
+                          -Thrives in collaborative environment <br>
+                         <br><br>
+                          I listen to music when I don't work.
+                          <br>
+                          <br>
+                          ~We could make differences in world by working hard~
+                        </p>
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Designing Web interfaces</li>
+                            <li><span>Problem-Solving</span><br>Using JAVA DSA</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2022-2026</span><br>Computer Science Engineering</li>
+                            <li><span>2020-2022</span><br>Senior Secondary</li>
+                            <li><span>2018-2020</span><br>Secondary Education</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- portfolio-->
+     <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="project.png">
+                    <div class="layer">
+                        <h3>Amazon Clone</h3>
+                        <p>This project is basically the clone of Amazon site in which I used HTML and CSS</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+     </div>
+     <!-- contact -->
+      <div id="contact">
+         <div class="container">
+             <div class="row">
+                 <div class="contact-left">
+                     <h1 class="sub-title">Contact me</h1>
+                     <p><i class="fa-solid fa-paper-plane"></i>anu731437@gmail.com</p>
+                     <p><i class="fa-solid fa-phone"></i>855459512</p>
+                     <div class="social-icons">
+                         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                         <a href="#"><i class="fa-brands fa-github"></i></a>
+                         <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                     </div>
+                     <a href="Anushka.docx" download class="btn btn2">Download CV</a>
+                 </div>
+             </div>
+         </div>
+     </div>
+        <div class="copyright">
+            <p>copyright <i class="fa-regular fa-copyright"></i> Anushka. made with<i class="fa-solid fa-heart"></i></p>
+        </div>
+      </div>
+    
+
+<script>
+   
+   var tablinks = document.getElementsByClassName("tab-links");
+   var tabcontents = document.getElementsByClassName("tab-contents");
+
+   function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+   }
+    
+</script>
+
+<script>
+
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+
+
+</script>
+</body>
+</html>
